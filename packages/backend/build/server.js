@@ -15,7 +15,7 @@ const app = (0, express_1.default)();
 const PORT = process.env.PORT;
 app.use(express_1.default.json());
 app.use((0, cors_1.default)({
-    origin: 'https://notsotragic.vercel.app/',
+    origin: ['https://notsotragic.vercel.app', 'https://notsotragic.vercel.app/'],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
 }));

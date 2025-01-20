@@ -14,7 +14,7 @@ const PORT = process.env.PORT
 
 app.use(express.json())
 app.use(cors({
-    origin: 'https://notsotragic.vercel.app/',
+    origin: ['https://notsotragic.vercel.app', 'https://notsotragic.vercel.app/'],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],}))
 
