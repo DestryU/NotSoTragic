@@ -14,7 +14,11 @@ dotenv_1.default.config();
 const app = (0, express_1.default)();
 const PORT = process.env.PORT;
 app.use(express_1.default.json());
-app.use((0, cors_1.default)({ origin: 'http://localhost:3000' }));
+app.use((0, cors_1.default)({
+    origin: 'https://notsotragic.vercel.app/',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+}));
 /* Couples a URL with a designated router file */
 app.use('/api/character', router_1.default);
 /* Awknowledges the launch of the server, displaying the corresponding port */
