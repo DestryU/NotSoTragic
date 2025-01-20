@@ -33,8 +33,8 @@ const CharacterList = () => {
                 </h1>
 
                 <ul>
-                    {characters.map((characters, index) => (
-                        <li key={index}>{characters.char_name}</li>
+                    {characters.map((character, index) => (
+                        <li key={index}>{character.char_name}</li>
                     ))}
                 </ul>
             </div>
