@@ -13,7 +13,10 @@ const app = express()
 const PORT = process.env.PORT
 
 app.use(express.json())
-app.use(cors({ origin: 'https://notsotragic.vercel.app/'}))
+app.use(cors({
+    origin: 'https://notsotragic.vercel.app/',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization'],}))
 
 
 /* Couples a URL with a designated router file */
