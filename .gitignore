@@ -1,7 +1,7 @@
 # Node.js
 node_modules/
 
-#.environment file
+# Environment file
 .env
 
 # Logs
