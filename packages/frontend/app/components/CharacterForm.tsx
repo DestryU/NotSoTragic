@@ -44,49 +44,71 @@ const CharacterForm = () => {
 
     return (
         <>
-            <div className='flex flex-col'>
-                <h2>Create a new character!</h2>
-                <form onSubmit={handleSubmit} className='flex flex-col'>
+                <h2 className='text-2xl text-blue-400'>Create a new character!</h2>
+            <div className=''>
+
+
+                <form onSubmit={handleSubmit} className='grid grid-cols-1 gap-4'>
                     
-                    <label htmlFor="char_name">Character Name</label>
-                    <input
-                    type="text"
-                    id="char_name"
-                    value={charName}
-                    onChange={(e) => setCharName(e.target.value)}
-                    placeholder='Enter character name'/>
+                    <label htmlFor="char_name" className='block w-full'>
+                        Character Name
+                        <input
+                        type="text"
+                        id="char_name"
+                        value={charName}
+                        onChange={(e) => setCharName(e.target.value)}
+                        placeholder='Enter character name'
+                        className='block w-full'/>
+                    </label>
+
+
+                    <label htmlFor="char_race" className='block w-full'>
+                        Character Race
+                        <input
+                        type="text"
+                        id="char_race"
+                        value={charRace}
+                        onChange={(e) => setCharRace(e.target.value)}
+                        placeholder='Enter character race'
+                        className='block w-full'/>
+                    </label>
+
+
+                    <label htmlFor="char_class" className='block w-full'>
+                        Character Class
+                        <input
+                        type="text"
+                        id="char_class"
+                        value={charClass}
+                        onChange={(e) => setCharClass(e.target.value)}
+                        placeholder='Enter character class'
+                        className='block w-full'/>
+                    </label>
                     
-                    <label htmlFor="char_race">Character Race</label>
-                    <input
-                    type="text"
-                    id="char_race"
-                    value={charRace}
-                    onChange={(e) => setCharRace(e.target.value)}
-                    placeholder='Enter character race'/>
                     
-                    <label htmlFor="char_class">Character Class</label>
-                    <input
-                    type="text"
-                    id="char_class"
-                    value={charClass}
-                    onChange={(e) => setCharClass(e.target.value)}
-                    placeholder='Enter character class'/>
+                    <label htmlFor="personality" className='block w-full'>
+                        Character Personality
+                        <input
+                        type="text"
+                        id="personality"
+                        value={personality}
+                        onChange={(e) => setPersonality(e.target.value)}
+                        placeholder='Enter character personality'
+                        className='block w-full'/>
+                    </label>
                     
-                    <label htmlFor="personality">Character Personality</label>
-                    <input
-                    type="text"
-                    id="personality"
-                    value={personality}
-                    onChange={(e) => setPersonality(e.target.value)}
-                    placeholder='Enter character personality'/>
-                    
-                    <label htmlFor="backstory">Character Backstory</label>
-                    <input
-                    type="text"
-                    id="backstory"
-                    value={backstory}
-                    onChange={(e) => setBackstory(e.target.value)}
-                    placeholder='Enter character backstory'/>
+
+                    <label htmlFor="backstory" className='block w-full'>
+                        Character Backstory
+                        <input
+                        type="text"
+                        id="backstory"
+                        value={backstory}
+                        onChange={(e) => setBackstory(e.target.value)}
+                        placeholder='Enter character backstory'
+                        className='block w-full'/>
+                    </label>
+
 
                     <button type='submit'>Submit Character</button>
 
