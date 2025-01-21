@@ -32,7 +32,7 @@ const CharacterList = () => {
                     Character List
                 </h1>
 
-                <ul>
+                <ul className='w-[50%]'>
                     {characters.map((character, index) => (
                         <>
                         <li key={index} className='text-xl'>{character.char_name}</li>
