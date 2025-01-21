@@ -8,7 +8,15 @@ export default function Home() {
       <CharacterForm />
 
       <h2 className="text-xl">All Characters</h2>
+
       <CharacterList />
+
+      {/* 
+          Content Creator note about the portfolio:
+
+          - This tool is meant to be a portfolio piece. It features a fully integrated PostgreSQL database for storing characters, automated functions for cleaning itself, and a fully documented git repo located here. 100% of the content used to build this site (including art and 3D models) was created by the owner. If you would like to contact the creator for job opportunites, comission work, or other professional inquiries, you can do so here.
+
+      */}
 
     </div>
   );

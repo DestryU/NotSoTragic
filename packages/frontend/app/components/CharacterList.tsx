@@ -34,7 +34,15 @@ const CharacterList = () => {
 
                 <ul>
                     {characters.map((character, index) => (
-                        <li key={index}>{character.char_name}</li>
+                        <li key={index} className='text-xl'>{character.char_name}</li>
+                    ))}
+
+                    {characters.map((character, index) => (
+                        <li key={index} className='text-sm italic'>`The {character.char_race} {character.char_class}`</li>
+                    ))}
+
+                    {characters.map((character, index) => (
+                        <li key={index}>{character.backstory}</li>
                     ))}
                 </ul>
             </div>

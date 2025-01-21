@@ -44,73 +44,75 @@ const CharacterForm = () => {
 
     return (
         <>
-                <h2 className='text-2xl text-blue-400'>Create a new character!</h2>
+
+            <h2 className='text-2xl text-blue-400'>Create a new character!</h2>
+            
             <div className=''>
 
 
-                <form onSubmit={handleSubmit} className='grid grid-cols-1 gap-4'>
+                <form onSubmit={handleSubmit} className='grid grid-cols-1 gap-3 divide-y-[1px] divide-black'>
                     
                     <label htmlFor="char_name" className='block w-full'>
-                        Character Name
+                        Name
                         <input
                         type="text"
                         id="char_name"
                         value={charName}
                         onChange={(e) => setCharName(e.target.value)}
-                        placeholder='Enter character name'
+                        placeholder='What do they call this hero?'
                         className='block w-full'/>
                     </label>
 
 
                     <label htmlFor="char_race" className='block w-full'>
-                        Character Race
+                        Race
                         <input
                         type="text"
                         id="char_race"
                         value={charRace}
                         onChange={(e) => setCharRace(e.target.value)}
-                        placeholder='Enter character race'
+                        placeholder='From where do they hail?'
                         className='block w-full'/>
                     </label>
 
 
                     <label htmlFor="char_class" className='block w-full'>
-                        Character Class
+                        Class
                         <input
                         type="text"
                         id="char_class"
                         value={charClass}
                         onChange={(e) => setCharClass(e.target.value)}
-                        placeholder='Enter character class'
+                        placeholder='What is their profession?'
                         className='block w-full'/>
                     </label>
                     
                     
                     <label htmlFor="personality" className='block w-full'>
-                        Character Personality
+                        Personality
                         <input
                         type="text"
                         id="personality"
                         value={personality}
                         onChange={(e) => setPersonality(e.target.value)}
-                        placeholder='Enter character personality'
+                        placeholder='What traits describe them?'
                         className='block w-full'/>
                     </label>
                     
 
                     <label htmlFor="backstory" className='block w-full'>
-                        Character Backstory
+                        Backstory
                         <input
                         type="text"
                         id="backstory"
                         value={backstory}
                         onChange={(e) => setBackstory(e.target.value)}
-                        placeholder='Enter character backstory'
+                        placeholder='What is their story?'
                         className='block w-full'/>
                     </label>
 
 
-                    <button type='submit'>Submit Character</button>
+                    <button type='submit' className='pt-5'>Submit Character</button>
 
                 </form>
 
