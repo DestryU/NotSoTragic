@@ -1,5 +1,6 @@
 import CharacterList from "./components/CharacterList";
 import CharacterForm from "./components/CharacterForm";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -7,9 +8,7 @@ export default function Home() {
 
       <CharacterForm />
 
-      <h2 className="text-xl">All Characters</h2>
-
-      <CharacterList />
+      <Link href={"/view-characters"}>View All Characters</Link>
 
       {/* 
           Content Creator note about the portfolio:

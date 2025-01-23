@@ -47,13 +47,13 @@ const CharacterForm = () => {
 
             <h2 className='text-2xl text-blue-400'>Create a new character!</h2>
             
-            <div className=''>
+            <div className='w-[80%]'>
 
 
                 <form onSubmit={handleSubmit} className='grid grid-cols-1 gap-3 divide-y-[1px] divide-black'>
                     
                     <label htmlFor="char_name" className='block w-full'>
-                        Name
+                    <h4 className='text-xl font-semibold'>Name</h4>
                         <input
                         type="text"
                         id="char_name"
@@ -63,33 +63,54 @@ const CharacterForm = () => {
                         className='block w-full'/>
                     </label>
 
+                    <div className='grid grid-cols-2 gap-3'>
+                        <label htmlFor="char_race" className='block w-full'>
+                            <h4 className='text-xl font-semibold'>Race</h4>
+                           
+                            <select
+                            id="char_race"
+                            value={charRace}
+                            onChange={(e) => setCharRace(e.target.value)}
+                            className='block w-full'>
+                                <option value="" disabled className='text-gray-400'>From where do they hail?</option>
+                                <option value="Dwarf">Dwarf</option>
+                                <option value="Elf">Elf</option>
+                                <option value="Halfling">Halfling</option>
+                                <option value="Human">Human</option>
+                                <option value="Dragonborn">Dragonborn</option>
+                                <option value="Gnome">Gnome</option>
+                                <option value="Half-Elf">Half-Elf</option>
+                                <option value="Half-Orc">Half-Orc</option>
+                                <option value="Tiefling">Tiefling</option>
+                            </select>
+                        </label>
 
-                    <label htmlFor="char_race" className='block w-full'>
-                        Race
-                        <input
-                        type="text"
-                        id="char_race"
-                        value={charRace}
-                        onChange={(e) => setCharRace(e.target.value)}
-                        placeholder='From where do they hail?'
-                        className='block w-full'/>
-                    </label>
+                        <label htmlFor="char_class" className='block w-full'>
+                        <h4 className='text-xl font-semibold'>Class</h4>
+                            <select
+                            id="char_class"
+                            value={charClass}
+                            onChange={(e) => setCharClass(e.target.value)}
+                            className='block w-full'>
+                                <option value="" disabled className='text-gray-400'>What is their profession?</option>
+                                <option value="Barbarian">Barbarian</option>
+                                <option value="Bard">Bard</option>
+                                <option value="Cleric">Cleric</option>
+                                <option value="Druid">Druid</option>
+                                <option value="Fighter">Fighter</option>
+                                <option value="Monk">Monk</option>
+                                <option value="Paladin">Paladin</option>
+                                <option value="Ranger">Ranger</option>
+                                <option value="Rogue">Rogue</option>
+                                <option value="Sorcerer">Sorcerer</option>
+                                <option value="Warlock">Warlock</option>
+                                <option value="Wizard">Wizard</option>
+                            </select>
+                        </label>
+                    </div>
 
-
-                    <label htmlFor="char_class" className='block w-full'>
-                        Class
-                        <input
-                        type="text"
-                        id="char_class"
-                        value={charClass}
-                        onChange={(e) => setCharClass(e.target.value)}
-                        placeholder='What is their profession?'
-                        className='block w-full'/>
-                    </label>
-                    
-                    
                     <label htmlFor="personality" className='block w-full'>
-                        Personality
+                        <h4 className='text-xl font-semibold'>Personality</h4>
                         <input
                         type="text"
                         id="personality"
@@ -98,17 +119,16 @@ const CharacterForm = () => {
                         placeholder='What traits describe them?'
                         className='block w-full'/>
                     </label>
-                    
 
                     <label htmlFor="backstory" className='block w-full'>
-                        Backstory
-                        <input
-                        type="text"
+                        <h4 className='text-xl font-semibold'>Backstory</h4>
+                        <textarea
                         id="backstory"
                         value={backstory}
                         onChange={(e) => setBackstory(e.target.value)}
                         placeholder='What is their story?'
-                        className='block w-full'/>
+                        className='block w-full'
+                        rows={5} />
                     </label>
 
 

@@ -27,21 +27,13 @@ const CharacterList = () => {
 
     return (
         <>
-            <div>
-                <h1>
-                    Character List
-                </h1>
-
-                <ul className='w-[50%]'>
-                    {characters.map((character, index) => (
-                        <>
-                        <li key={index} className='text-xl'>{character.char_name}</li>
-                        <li key={index} className='text-sm italic'>`The {character.char_race} {character.char_class}`</li>
-                        <li key={index} className='mb-6'>{character.backstory}</li>
-                        </>
-                    ))}
-                </ul>
-            </div>
+                {characters.map((character, index) => (
+                    <div key={index} className='bg-gray-200 p-4 mb-4 rounded'>
+                        <h2 className='text-2xl'>{character.char_name}</h2>
+                        <h3 className='text-sm italic text-gray-700 mt-2'>`The {character.char_race} {character.char_class}`</h3>
+                        <p className='mt-4'>{character.backstory}</p>
+                    </div>
+                ))}
         </>
     )
 }
