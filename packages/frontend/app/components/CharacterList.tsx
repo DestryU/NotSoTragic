@@ -37,7 +37,7 @@ const CharacterList = () => {
                         <>
                         <li key={index} className='text-xl'>{character.char_name}</li>
                         <li key={index} className='text-sm italic'>`The {character.char_race} {character.char_class}`</li>
-                        <li key={index}>{character.backstory}</li>
+                        <li key={index} className='mb-6'>{character.backstory}</li>
                         </>
                     ))}
                 </ul>
